@@ -1,10 +1,16 @@
 import React from "react";
+import Newsdetails from "./NewsDetails.jsx";
 
-
-const AllNews =()=>{
-
+const AllNews =({data})=>{
+ console.log(data);
 return(
-    <div>welcom to AllNews </div>
+    <div>allnews 
+        <div>
+        {data.map((e,i)=>{
+           <Newsdetails />
+        })}
+        </div>
+    </div>
 )
 }
 export default AllNews
