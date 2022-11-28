@@ -22,8 +22,9 @@ USE `sport-news` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sport-news`.`sport` (
   `idsport` INT(11) NOT NULL AUTO_INCREMENT,
-  `title` VARCHAR(45) NOT NULL,
-  `blog` VARCHAR(255) NOT NULL,
+  `title` VARCHAR(255) NOT NULL,
+  `body` VARCHAR(255) NOT NULL,
+  `imageUrl` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`idsport`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
