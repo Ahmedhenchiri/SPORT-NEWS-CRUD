@@ -1,8 +1,5 @@
 const mysql = require('mysql2');
 
-
-
-
 // create a databases connection and export it from this file 
 
 const connection= mysql.createConnection({
@@ -14,5 +11,8 @@ const connection= mysql.createConnection({
 
 connection.connect(function(err){
     if(err)console.log('Error to connect to database ',err)
+
     else console.log('Database connected') 
-})
+});
+ 
+module.exports = connection

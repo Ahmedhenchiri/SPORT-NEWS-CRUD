@@ -1,6 +1,6 @@
 const db = {}
 
 
-db.sportNews=require('./sport-news')
+db.sportNews = require('../index')
 
-module.exports=db ; 
+module.exports=db;  

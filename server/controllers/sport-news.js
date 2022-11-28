@@ -10,19 +10,19 @@ module.exports = {
         })
     },
     addSport:function(req,res){
-        sportNews.add(function(err,result){
+        sportNews.add(req.body,function(err,result){
             if(err)res.status(500).send(err)
             else res.status(201).send(result)
         })
     },
     deleteSport:function(req,res){
-      sportNews.delete(function(err,result){
+      sportNews.delete(req.params.id,function(err,result){
         if(err)res.status(500).send(err)
         else res.status(201).send(result)
       })
     },
     updateSport:function(req,res){
-        sportNews.put(function(err,result){
+        sportNews.put(req.body,req.params.id,function(err,result){
             if(err)res.status(500).send(err)
             else res.status(201).send(result)
         })
