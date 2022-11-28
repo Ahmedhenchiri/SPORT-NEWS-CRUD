@@ -13,6 +13,12 @@ add:function(news,callback){
     conn.query(sql,news,function(error,results){
         callback(error,results)
     })
+},
+delete:function(id,callback){
+ const sql=`DELETE FROM sport WHERE id =${req.params.id}`; 
+ conn.query(sql,id,function(error,result){
+    callback(error,result)
+ })
 }
 
 
