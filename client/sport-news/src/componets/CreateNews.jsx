@@ -9,6 +9,7 @@ const CreateNews =()=>{
  .then((res)=>{
     console.log('add sport')
  })
+ window.location.reload(false);
  }
     return (
         <div className="blog-list-item">
