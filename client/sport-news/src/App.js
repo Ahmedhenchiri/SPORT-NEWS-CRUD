@@ -1,24 +1,55 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
+import AllNews from './componets/AllNews.jsx';
+import CreateNews from './componets/CreateNews.jsx';
+import OneNews from './componets/OneNews.jsx';
 import './App.css';
 
 function App() {
+ const [view,setView] = useState('allnews') 
+
+ const changeView =(view)=>{
+  setView(view)
+ }
+ const renderView= () =>{ 
+   if(view === 'allnews'){
+    return <AllNews  />
+   }else if (view === 'oneNews'){
+    return <OneNews />
+   }else if(view === 'createNews'){
+    return <CreateNews />
+   }
+ }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+    <nav className=" nav">
+      <div
+        className={
+           view !== "createNews"
+            ? "nav-unselected"
+            : "nav-selected"
+        }
+        onClick={() => {
+          changeView("createNews");
+        }}
+      >
+        Create Post
+      </div>
+      <div
+        className={
+          view === "allnews" ? "nav-selected" : "nav-unselected"
+        }
+        onClick={() => changeView("allnews")}
+      >
+        All Posts
+      </div>
+      <div>
+        
+      </div>
+    </nav>
+
+    {renderView()}
+  </div>
   );
 }
 
