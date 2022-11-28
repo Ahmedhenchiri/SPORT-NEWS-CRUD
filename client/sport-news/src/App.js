@@ -7,6 +7,7 @@ import axios from 'axios'
 function App() {
  const [view,setView] = useState('allnews') 
  const [data,setData] = useState([]);
+ const [onesport,setSport] = useState({});
  useEffect(()=>{
    axios.get("http://localhost:5000/api/sportnews/getAll")
    .then((res)=>{
@@ -17,12 +18,16 @@ function App() {
 
  const changeView =(view)=>{
   setView(view)
+ } 
+ const change =(news)=>{
+  setSport(news)
+  changeView('oneNews')
  }
  const renderView= () =>{ 
    if(view === 'allnews'){
-    return <AllNews data={data} />
+    return <AllNews data={data} change={change} />
    }else if (view === 'oneNews'){
-    return <OneNews />
+    return <OneNews data={onesport}/>
    }else if(view === 'createNews'){
     return <CreateNews />
    }

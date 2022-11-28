@@ -1,13 +1,15 @@
 import React from "react";
-import Newsdetails from "./NewsDetails.jsx";
+import NewsDetails from "./NewsDetails.jsx";
 
-const AllNews =({data})=>{
- console.log(data);
+const AllNews =(props)=>{
+ console.log(props);
 return(
     <div>allnews 
         <div>
-        {data.map((e,i)=>{
-           <Newsdetails />
+        {props.data.map((e,i)=>{
+           
+         return   <NewsDetails key={i} data={e} change={props.change}/>
+           
         })}
         </div>
     </div>
