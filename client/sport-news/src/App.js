@@ -33,7 +33,7 @@ function App() {
           changeView("createNews");
         }}
       >
-        Create Post
+        Create New News 
       </div>
       <div
         className={
@@ -41,7 +41,7 @@ function App() {
         }
         onClick={() => changeView("allnews")}
       >
-        All Posts
+        All News
       </div>
       <div>
         
