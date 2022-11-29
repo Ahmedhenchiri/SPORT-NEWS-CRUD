@@ -10,7 +10,7 @@ module.exports = {
         })
     },
     addSport:function(req,res){
-        sportNews.add(req.body,function(err,result){
+        sportNews.add(req.body,req.params.id,(err,result)=>{
             if(err)res.status(500).send(err)
             else res.status(201).send(result)
         })
