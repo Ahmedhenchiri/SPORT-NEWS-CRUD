@@ -19,6 +19,7 @@ const id = props.data.idsport
      .catch((err)=>{
         console.log(err);
      })
+     window.location.reload(false);
    
     }
     const onchangeHandler=(e)=>{
@@ -28,7 +29,7 @@ const id = props.data.idsport
         })
     }
   return(
-    <div className="blog-list-item">
+    <div className="container">
       <h1 className="New-Post-Title">Update news</h1>
       <form className="New-Post-Form" onSubmit={updateSport}>
         <input
@@ -67,7 +68,7 @@ const id = props.data.idsport
         />
 
         <input
-          className="btn btn-secondary searchButton"
+          className="button"
           type="submit"
           value="Confirmed"
         />

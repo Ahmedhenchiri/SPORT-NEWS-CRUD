@@ -23,7 +23,7 @@ const OneNews=({data,changeUp})=>{
     <div className="blog-list-item-lede">
       <img src={data.imageUrl} alt="no content" />
     </div>
-    <button className='button1' onClick={()=>{return changeUp()}}>update</button>{" "}{" "}
+    <button className='button' onClick={()=>{return changeUp()}}>update</button>{" "}{" "}
     <button className='button' onClick={()=>{return deleteNews(data.idsport)}}>delete</button>
   </div>
  )
