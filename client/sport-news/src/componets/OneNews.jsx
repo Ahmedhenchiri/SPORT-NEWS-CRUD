@@ -1,7 +1,7 @@
 import react from 'react' ;
 import axios from 'axios'
-const OneNews=({data})=>{
-    console.log(data,'<---->');
+const OneNews=({data,changeUp})=>{
+    console.log(data,changeUp,'<---->');
     const deleteNews=(id)=>{
         axios.delete(`http://localhost:5000/api/sportnews/delete/${id}`)
         .then((res)=>{
@@ -23,6 +23,7 @@ const OneNews=({data})=>{
     <div className="blog-list-item-lede">
       <img src={data.imageUrl} alt="no content" />
     </div>
+    <button onClick={()=>{return changeUp()}}>update</button>
     <button onClick={()=>{return deleteNews(data.idsport)}}>delete</button>
   </div>
  )

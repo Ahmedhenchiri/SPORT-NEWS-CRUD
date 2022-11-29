@@ -4,6 +4,7 @@ import CreateNews from './componets/CreateNews.jsx';
 import OneNews from './componets/OneNews.jsx';
 import './App.css';
 import axios from 'axios'
+import UpdateNews from './componets/UpdateNews.jsx';
 function App() {
  const [view,setView] = useState('allnews') 
  const [data,setData] = useState([]);
@@ -23,13 +24,18 @@ function App() {
   setSport(news)
   changeView('oneNews')
  }
+ const changeUp=()=>{
+  changeView('updateNews')
+ }
  const renderView= () =>{ 
    if(view === 'allnews'){
     return <AllNews data={data} change={change} />
    }else if (view === 'oneNews'){
-    return <OneNews data={onesport}/>
+    return <OneNews data={onesport} changeUp={changeUp} />
    }else if(view === 'createNews'){
     return <CreateNews />
+   }else if (view === 'updateNews'){
+    return <UpdateNews data={onesport} />
    }
  }
 
