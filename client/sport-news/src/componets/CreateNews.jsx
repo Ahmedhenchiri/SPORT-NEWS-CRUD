@@ -45,7 +45,7 @@ const CreateNews =()=>{
         />
 
         <input
-          className="btn btn-secondary searchButton"
+          className="button"
           type="button"
           value="Publish"
           onClick={() => {

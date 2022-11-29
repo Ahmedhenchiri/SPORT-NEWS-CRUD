@@ -59,10 +59,10 @@ form textarea {
 
 .post {
   width:400px;
-  font-size: 12px;
+  /* font-size: 12px;
   padding: 1px;
   border-radius: 4px;
-  border-width: 10px;
+  border-width: 10px; */
   margin-bottom: 1%;
 }
 
@@ -128,7 +128,7 @@ form textarea {
 
 .search {
   width: 200px;
-  height:50px;
+  height:30px;
   border-radius: 4px;
   border-width: 0px;
   font-family: "Francois One";
@@ -211,6 +211,13 @@ form textarea {
   
   
 
+}
+.container
+{
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
 }
 
 
