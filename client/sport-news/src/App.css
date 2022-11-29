@@ -117,7 +117,7 @@ form textarea {
 }
 
 .nav {
-  background-color: #000000;
+  background-color: #fefefe;
   margin: 0px;
   padding: 10px;
   display: flex;
@@ -155,7 +155,7 @@ form textarea {
 
 .nav-selected {
   padding: 5px;
-  color: white;
+  color: rgb(12, 11, 11);
   font-weight: bold;
   margin-right: 5px;
   font-size: 1.1em;

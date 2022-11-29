@@ -4,7 +4,7 @@ import NewsDetails from "./NewsDetails.jsx";
 const AllNews =(props)=>{
  console.log(props);
 return(
-    <div>allnews 
+    <div>
         <div>
         {props.data.map((e,i)=>{
            

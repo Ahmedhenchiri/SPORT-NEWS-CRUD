@@ -8,9 +8,9 @@ const UpdateNews=(props)=>{
         console.log('====================================');
         console.log('==================form==================',form);
 const id = props.data.idsport
-console.log('====================================');
-console.log(id);
-console.log('====================================');
+// console.log('====================================');
+// console.log(id);
+// console.log('====================================');
         e.preventDefault()
      axios.put(`http://localhost:5000/api/sportnews/update/${id}`,form)
      .then((res)=>{
@@ -19,7 +19,7 @@ console.log('====================================');
      .catch((err)=>{
         console.log(err);
      })
-    //  window.location.reload(false);
+   
     }
     const onchangeHandler=(e)=>{
         setForm({
