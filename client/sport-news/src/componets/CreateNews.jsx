@@ -12,8 +12,8 @@ const CreateNews =()=>{
  window.location.reload(false);
  }
     return (
-        <div className="blog-list-item">
-      <h1 className="New-Post-Title">New Post</h1>
+        <div className="container">
+      <h1 className="New-Post-Title">NEW SPORT NEWS</h1>
       <form className="New-Post-Form">
         <input
           id="title"
@@ -28,7 +28,7 @@ const CreateNews =()=>{
         <textarea
           id="content"
           className="post "
-          placeholder="Content..."
+          placeholder="Body ..."
           required
           minLength="20"
           onChange={(event) => setBody(event.target.value)}

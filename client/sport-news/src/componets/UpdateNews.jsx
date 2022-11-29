@@ -46,7 +46,7 @@ const id = props.data.idsport
         <textarea
           id="content"
           className="post "
-          placeholder="Content..."
+          placeholder="body ......."
           name="body"
           required
           minLength="20"
