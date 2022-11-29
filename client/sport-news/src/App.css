@@ -43,7 +43,7 @@ form input[type="text"] {
 
 form button {
   width: 30%;
-  background-color: #2c3e50;
+  background-color: #080808;
   color: white;
   border-radius: 4px;
 }
@@ -102,11 +102,11 @@ form textarea {
   width: 100%;
 }
 
-.blog-list-item-byline {
+/* .blog-list-item-byline {
   font-size: 0.8em;
   margin-bottom: 15px;
   color: #777777;
-}
+} */
 
 .blog-list-item-byline-author {
   font-weight: bolder;
@@ -117,7 +117,7 @@ form textarea {
 }
 
 .nav {
-  background-color: #fefefe;
+  background-color: #000000;
   margin: 0px;
   padding: 10px;
   display: flex;
@@ -155,16 +155,16 @@ form textarea {
 
 .nav-selected {
   padding: 5px;
-  color: rgb(12, 11, 11);
-  font-weight: bold;
+  color: rgb(255, 255, 255);
+  /* font-weight: bold;
   margin-right: 5px;
-  font-size: 1.1em;
+  font-size: 1.1em; */
   cursor: pointer;
 }
 
 .nav-unselected {
-  padding: 5px;
-  margin-right: 5px;
+  /* padding: 5px;
+  margin-right: 5px; */
   color: grey;
   font-size: 1.1em;
   cursor: pointer;
