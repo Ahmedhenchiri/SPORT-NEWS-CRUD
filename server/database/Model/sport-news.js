@@ -21,9 +21,9 @@ delete:function(id,callback){
     callback(error,result)
  })
 },
-put:function(id,title,body,imageUrl,callback){
-    const sql = `UPDATE sport set title = (?),body = (?),imageUrl=(?)  WHERE idsport  =${id}  `;
-    conn.query(sql,id,title,body,imageUrl,function(error,result){
+put:function(id,title,body ,imageUrl,callback){
+    const sql = `UPDATE sport set title = (?),body  = (?),imageUrl=(?)  WHERE idsport  =${id}  `;
+    conn.query(sql,id,title,blog,imageUrl,function(error,result){
         callback(error,result)
     })
 }

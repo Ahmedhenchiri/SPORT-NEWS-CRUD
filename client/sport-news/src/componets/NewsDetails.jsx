@@ -1,7 +1,8 @@
 import react from 'react'
-
+import axios from 'axios'
 const Newsdetails =({change,data})=>{
     console.log(change);
+ 
     return(
         <div className="blog-list-item" onClick={() => change(data)}>
         <div className="blog-list-item-title">{data.title}</div>
@@ -12,6 +13,7 @@ const Newsdetails =({change,data})=>{
        
         <div className="blog-list-item-lede">
           <img src={data.imageUrl} alt="no content" />
+         
         </div>
       </div>
     )
